@@ -1,0 +1,254 @@
+\documentclass[letter,10.9pt]{article}
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\hyphenation{Inte-lligent}
+
+\usepackage{url}
+
+\raggedbottom
+\raggedright
+\usepackage{tocloft}
+\usepackage{parskip}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+
+\usepackage[space]{xeCJK}
+
+%%% Assuming Chinese is the main CJK language...
+\setCJKmainfont[
+  BoldFont=WenQuanYi Zen Hei,
+  ItalicFont=AR PL KaitiM GB]
+  {AR PL SungtiL GB}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{cwTeXFangSong}
+
+\pagestyle{empty}
+
+\makeatletter
+\renewcommand{\section}{\@startsection
+  {section}
+  {12}
+  {\z@}
+  {0.1\baselineskip}
+  {0.1\baselineskip}
+  {\ruled@title}}
+\newcommand{\ruled@title}[1]{
+  \normalfont\large\scshape\bfseries #1\vskip2pt\hrule\vspace{0pt}}
+\makeatother
+
+\newcommand*{\Cdot}{\raisebox{-1.3ex}{\scalebox{4}{$\mathbf{\cdot}$}}}
+
+\newcommand{\restitle}[4]{
+  \begin{center}
+    {\bfseries\scshape\Large #1}\\
+    \vspace{3pt}
+    #2\\
+    #3\\
+    #4
+  \end{center}
+}
+
+\newcommand{\resentryedu}[4]{
+  \begin{minipage}[t]{\linewidth}
+    \setlength\tabcolsep{0pt}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} - #2 & #3 
+    \end{tabular*}
+    
+    #4
+  \end{minipage}
+}
+
+
+\newcommand{\resentry}[4]{
+  \begin{minipage}[t]{\linewidth}
+    \setlength\tabcolsep{0pt}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} - #2 & #3 \\
+    \end{tabular*}
+    \rule{3pt}{0pt}
+	#4
+  \end{minipage}
+}
+
+\newcommand{\resentryproj}[5]{
+  \begin{minipage}[t]{\linewidth}
+    \setlength\tabcolsep{0pt}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} #2 - #3 & #4 \\
+    \end{tabular*}
+    \rule{3pt}{0pt}
+	#5
+  \end{minipage}
+}
+
+\newcommand{\resentrysimple}[3]{
+  \begin{minipage}[t]{\linewidth}
+    \setlength\tabcolsep{0pt}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} & #2 \\
+    \end{tabular*}
+    \rule{3pt}{0pt}
+	#3
+  \end{minipage}
+}
+
+
+\newcommand{\resentryhonor}[2]{
+  \hspace{1pt}\labelitemi\hspace{4pt}#1\hfill #2 \\
+  \vspace{2pt}
+}
+
+\newcommand{\resentryadd}[2]{
+  \textbf{#1}: #2 \\
+  \vspace{2pt}
+}
+
+\newcommand{\resproject}[1]
+{Project: \textquotedbl\textsf{\slshape#1}\textquotedbl}
+
+\newenvironment{resitemize}
+{\vspace{-10pt}
+\begin{itemize}
+\setlength{\parskip}{0ex}
+\setlength{\leftskip}{-14pt}}
+{\end{itemize}}
+
+\newenvironment{resitemizeempty}
+{\vspace{-10pt}
+\renewcommand\labelitemi{}
+\begin{itemize}
+\setlength{\parskip}{0ex}
+\setlength{\leftskip}{-19pt}}
+{\end{itemize}}
+
+\begin{document}
+
+\restitle{Jiayi Zhou}
+{Email: judyzhou959@utexas.edu | Cell Phone: (571)\ 269-9367 }{LinkedIn:www.linkedin.com/in/jiayi-zhou-utexas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{EDUCATION}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resentry
+{The University of Texas at Austin }
+{Austin, TX}
+{Expected May 2021}
+{
+\begin{resitemize}
+\item BS in Computer Science | GPA: 3.89/4.00
+\item Coursework: Principles of Computer Systems, Algorithms and Complexity, Computer Organization And Architecture, Python, Java, Data Structure, Discrete Math, Introduction to Probability and Statistics
+\item Natural Sciences College Scholar 2018
+\item University Honors (Spring 2018; Spring 2017; Fall 2017)
+\end{resitemize}
+ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{EXPERIENCE}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resentry
+{Deep Brain Research}
+{\emph{Undergraduate Research Assistant}; Austin, TX}
+{August 2018 - December 2018}
+{
+\begin{resitemize}
+\item Developed virtual environments to test different navigation models in the human brain through simulated spatial navigation tasks.
+\item  Scripting C\# to designing and programming virtual environments within the Unity game engine. 
+\end{resitemize}
+ }
+ 
+\resentry
+{Mobike}
+{\emph{Data Analyst Intern - TECH-Big Data/BI Group}; Beijing,China}
+{May 2018 - August 2018}
+{
+\begin{resitemize}
+\item Built, developed and maintained tables in overall data mart by writing SQL queries and shell scripts.
+\item Programmed complex SQL queries across large volumes of data on datasets (Hadoop, MySql) for data mining, cleaning and munging. 
+\item Used Mobike’s internal data visualization tool (similar to Tableau) to create visualizations, and interactive dashboards.
+\item Analyzed users' behaviors that should be tracked for company’s analytical requirements. Designed a data tracking PRD(Product Requirement Documentation) for technical team  based on Event Recording Model. Programmed Hive SQL queries to cleanse and normalize collected raw data into high-quality aligned with company’s analytical requirements
+\item Conducted data analysis with Excel(pivot table, vlookup) for PM team and International Strategy team in order to evaluate, identify, and implement actionable business performance measures.
+\item Used Python, Pandas, and Numpy to cleanse and manipulate raw data.
+\end{resitemize}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PROJECTS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resentryproj
+{Art Gallery}
+{}
+{Unity3D project}
+{Fall 2018}
+{
+\begin{resitemize}
+\item Created 3D environment for studying spatial navigation. Current level: control player's view by mouse; control player's movement by keyboards; the door will be open after player correctly matching same pictures on the wall.
+\end{resitemize}
+}
+ 
+\resentryproj
+{Random Writer}
+{}
+{Python project}
+{Fall 2018}
+{
+\begin{resitemize}
+\item Used a Markov chain to create a statistical model of a piece of English text or bytes. Simulate the Markov chain to generate stylized pseudo-random text. 
+\end{resitemize}
+}
+ 
+\resentryproj
+{Pricing Strategy Project}
+{}
+{Data Analysis}
+{Summer 2018}
+{
+\begin{resitemize}
+\item Analyzed data of trips and of membership card from all Mobike's oversea users by using Excel; Provided advice for new pricing strategy; increased income and gained more users.
+\end{resitemize}
+
+\resentryproj
+{Huffman Coding}
+{}
+{Data structure project}
+{Spring 2018}
+{
+\begin{resitemize}
+\item A processor to compress and uncompress data based on Huffman's algorith: .txt and .html files could be compressed by 40\%; .gz, .bz, .zip, .rar could be compressed by 43\%; .tif could be compressed 18\%
+\end{resitemize}
+}
+
+\resentryproj
+{Graph Algorithms}
+{}
+{Java project}
+{Spring 2018}
+{
+\begin{resitemize}
+\item Modeled a directed, weighted graph to rank college football teams for a given season based on wins and margin of victory. Find all weighted shortest paths from the starting vertex to all other vertices in this Graph using Dijkstra's algorithm.
+\end{resitemize}
+}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SKILLS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{12pt}
+\begin{resitemize}
+\item Programming Languages: Java, SQL, Python, C, C\#
+\item Software: Eclipse, MySQLWorkbench, Visual Studio, Unity, Jupyter Notebook, Excel
+\item Languages: Chinese(Native), English(Fluent), Korean(Basic)
+\end{resitemize}
+\vspace{8pt}
+
+\end{document}
