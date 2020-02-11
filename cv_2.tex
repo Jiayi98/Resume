@@ -1,5 +1,5 @@
-\documentclass[letter,10.9pt]{article}
-\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+\documentclass[letter,10.5pt]{article}
+\usepackage[top=0.5in,bottom=0.5in,left=0.4in,right=0.4in]{geometry}
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -43,13 +43,12 @@
 
 \newcommand*{\Cdot}{\raisebox{-1.3ex}{\scalebox{4}{$\mathbf{\cdot}$}}}
 
-\newcommand{\restitle}[4]{
+\newcommand{\restitle}[3]{
   \begin{center}
     {\bfseries\scshape\Large #1}\\
     \vspace{3pt}
     #2\\
-    #3\\
-    #4
+    #3
   \end{center}
 }
 
@@ -69,7 +68,7 @@
   \begin{minipage}[t]{\linewidth}
     \setlength\tabcolsep{0pt}
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r@{}}
-      \textbf{#1} - #2 & #3 \\
+      \textbf{#1} & #2 \\ #3 \\
     \end{tabular*}
     \rule{3pt}{0pt}
 	#4
@@ -130,52 +129,98 @@
 \begin{document}
 
 \restitle{Jiayi Zhou}
-{Email: judyzhou959@utexas.edu | Cell Phone: (571)\ 269-9367 }{LinkedIn:www.linkedin.com/in/jiayi-zhou-utexas}
+{Austin, TX 78705 | judyzhou959@utexas.edu | +1(571)\ 269-9367 }{}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{EDUCATION}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resentry
 {The University of Texas at Austin }
-{Austin, TX}
 {Expected May 2021}
+{\emph{Bachelor of Science, Computer Science} | \emph{Cumulative GPA: 3.76/4.0}}
+
 {
 \begin{resitemize}
-\item BS in Computer Science | GPA: 3.89/4.00
-\item Coursework: Principles of Computer Systems, Algorithms and Complexity, Computer Organization And Architecture, Python, Java, Data Structure, Discrete Math, Introduction to Probability and Statistics
-\item Natural Sciences College Scholar 2018
-\item University Honors (Spring 2018; Spring 2017; Fall 2017)
+\item Honors: Natural Sciences College Scholar 2019,2018
+\item Relevant Coursework: Cloud Computing, Computer Network, Database, Modern Web Application, Computer Systems, Algorithms, Computer Architecture, Data Structure, Discrete Math, Probability and Statistics
+
 \end{resitemize}
  }
-
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SKILLS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{12pt}
+\begin{resitemize}
+\item Languages: Java, SQL, Python, Shell script, C, HTML, Javascript, Golang, Git
+\item Others: Django, Spring, CSS Bootstrap, AWS, GCP, JDBC, Hibernate, MySQL, Postgres, NoSQL, Hadoop, Lucidchart 
+\end{resitemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{EXPERIENCE}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \resentry
-{Deep Brain Research}
-{\emph{Undergraduate Research Assistant}; Austin, TX}
-{August 2018 - December 2018}
+{University of Texas at Austin}
+{Jan 2020 - Present}
+{ -\emph{Undergraduate Teaching Assistant}; Austin, TX}
+
 {
 \begin{resitemize}
-\item Developed virtual environments to test different navigation models in the human brain through simulated spatial navigation tasks.
-\item  Scripting C\# to designing and programming virtual environments within the Unity game engine. 
+\item TA for CS327E(instructor: Shirley Cohen) which focuses on data management and data processing techniques;
+% coursework will be implemented on GCP using a variety of data science tools: Postgres, BigQuery, Apache Beam and Dataflow, Apache Airflow and Composer, Jupyter Notebooks, and Data Studio.
+\item Holding 2 one-hour office hours every week, and providing support to 80 students in the classroom setting while they work on in-class assignments;
+\item Helping students’ programming and debugging technique by providing hands on feedback and coaching;
+\item Grading SQL and Python code scripts and projects based on standardized rubrics;
+% data warehouse project
 \end{resitemize}
  }
  
 \resentry
-{Mobike}
-{\emph{Data Analyst Intern - TECH-Big Data/BI Group}; Beijing,China}
-{May 2018 - August 2018}
+{LeapTech}
+{May 2019 - Aug 2019}
+{ -\emph{Full Stack Engineer Intern}; Beijing, China}
+
 {
 \begin{resitemize}
-\item Built, developed and maintained tables in overall data mart by writing SQL queries and shell scripts.
-\item Programmed complex SQL queries across large volumes of data on datasets (Hadoop, MySql) for data mining, cleaning and munging. 
-\item Used Mobike’s internal data visualization tool (similar to Tableau) to create visualizations, and interactive dashboards.
-\item Analyzed users' behaviors that should be tracked for company’s analytical requirements. Designed a data tracking PRD(Product Requirement Documentation) for technical team  based on Event Recording Model. Programmed Hive SQL queries to cleanse and normalize collected raw data into high-quality aligned with company’s analytical requirements
-\item Conducted data analysis with Excel(pivot table, vlookup) for PM team and International Strategy team in order to evaluate, identify, and implement actionable business performance measures.
-\item Used Python, Pandas, and Numpy to cleanse and manipulate raw data.
+\item Implemented an information management web application independently. Provided a platform for users to manage data without directly accessing databases;
+% It supports Create, Read, Update, Delete (CRUD) and multi-keywords search with different permissions for various user groups. 
+\item Designed relational data models, involving one-to-many and many-to-many model for 10 tables. Worked in MySQL database on SQL queries;
+% Build SQL queries for performing various CRUD operations like create, update, read and delete.
+\item Used Python, Django, MySQL for backend modules and CSS Bootstrap, HTML, and JavaScript for frontend modules;
+% Developed features for user interactive web pages using CSS Bootstrap, HTML, and JavaScript for frontend modules.
+\end{resitemize}
+ }
+ 
+% \resentry
+% {Deep Brain Research}
+% {August 2018 - December 2018}
+% { -\emph{Undergraduate Research Assistant}; Austin, TX}
+
+% {
+% \begin{resitemize}
+% \item Designed and developed virtual environments to test different navigation models in % the human brain through simulated spatial navigation tasks
+% \item  Scripted C\# to design and program virtual environments within the Unity game engine. The program provides Dr.Nadasdy a tool for his neurological experiment
+% Current level of demo: control player's view by mouse; control player's movement by keyboards; the door will be open after player correctly matching same pictures on the wall.
+% \end{resitemize}
+%  }
+ 
+\resentry
+{Mobike}
+{May 2018 - Aug 2018}
+{ -\emph{Data Engineer Intern - TECH-Big Data/BI Group}; Beijing,China}
+
+{
+\begin{resitemize}
+%\item  by writing SQL queries and shell scripts.
+\item Programmed complex SQL queries across large volumes of data on datasets (Hadoop, MySql) for data mining and data cleansing;
+\item Built, developed and maintained tables in overall data mart;
+%\item Used Mobike’s internal data visualization tool (similar to Tableau) to create visualizations, and interactive dashboards.
+\item Analyzed users' behaviors that should be tracked for company's analytical requirements. Designed a data tracking PRD(Product Requirement Documentation) for technical team  based on Event Recording Model;
+% Event recording is a process for documenting the number of times a behavior occurs. An observer using event recording makes a tally mark or documents in some way each time a student engages in a target behavior. The observer also records the time period in which the behavior is being observed.
+\item Conducted data analysis with Excel (pivot table, vlookup) for PM team and International Strategy team in order to evaluate actionable business performance measures;
+%, identify, and implement
+%\item Used Python, Pandas, and Numpy to cleanse and manipulate raw data.
 \end{resitemize}
 }
 
@@ -184,24 +229,34 @@
 \section{PROJECTS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resentryproj
-{Art Gallery}
+{Traffic Camera Analytics Page}
 {}
-{Unity3D project}
-{Fall 2018}
+{Coursework}
+{Fall 2019}
 {
 \begin{resitemize}
-\item Created 3D environment for studying spatial navigation. Current level: control player's view by mouse; control player's movement by keyboards; the door will be open after player correctly matching same pictures on the wall.
+\item  Used Java, HTML, JavaScript, and REST APIs build a simple “analytics” display for Traffic Cameras in Austin Metro Area;
+\item Created a REST API to retrieve camera data from the data source for calculations and expose the results;
+% calculates the distribution(counts) for different traffic camera attributes from the data source (above link). Feel free to calculate the counts keeping them in memory, or running an ETL process and calculating the counts that way.
+% a single REST endpoint that generates one XML output containing all the counts.
+\item Created a REST API invoked from the JavaScript to get the data which is rendered by the JavaScript;
+\item Deployed the web application to Heroku;
 \end{resitemize}
 }
- 
+% In another assignment I implement an ETL system to pull and merge traffic camera reports data from two sources then load the transformed data into a database table. Built a REST API to retrieve the merged data. In this one I used hibernate
+
 \resentryproj
-{Random Writer}
+{Pintos Extension}
 {}
-{Python project}
-{Fall 2018}
+{OS Coursework}
+{Spring 2019}
 {
 \begin{resitemize}
-\item Used a Markov chain to create a statistical model of a piece of English text or bytes. Simulate the Markov chain to generate stylized pseudo-random text. 
+\item Programmed a simple operating system framework for the 80x86 architecture;
+\item Handled multiple threads of execution with proper synchronization;
+\item Improved the ability to run user programs by allowing programs to interact with the OS via system calls; 
+\item Implemented virtual memory module to remove that limitation caused by machine's main memory size;
+\item Optimized single-thread file system to multi-level indexed file system;
 \end{resitemize}
 }
  
@@ -212,43 +267,14 @@
 {Summer 2018}
 {
 \begin{resitemize}
-\item Analyzed data of trips and of membership card from all Mobike's oversea users by using Excel; Provided advice for new pricing strategy; increased income and gained more users.
-\end{resitemize}
-
-\resentryproj
-{Huffman Coding}
-{}
-{Data structure project}
-{Spring 2018}
-{
-\begin{resitemize}
-\item A processor to compress and uncompress data based on Huffman's algorith: .txt and .html files could be compressed by 40\%; .gz, .bz, .zip, .rar could be compressed by 43\%; .tif could be compressed 18\%
+\item Cleansed and normalized the raw data into high-quality aligned with analytical requirements;
+\item Analyzed data of trips and of membership card from all Mobike's oversea users, Used Mobike’s internal data visualization tool to create visualizations;
+\item Designing new pricing strategy with International Strategy Team, increased income and gained more users;
 \end{resitemize}
 }
 
-\resentryproj
-{Graph Algorithms}
-{}
-{Java project}
-{Spring 2018}
-{
-\begin{resitemize}
-\item Modeled a directed, weighted graph to rank college football teams for a given season based on wins and margin of victory. Find all weighted shortest paths from the starting vertex to all other vertices in this Graph using Dijkstra's algorithm.
-\end{resitemize}
-}
-}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{SKILLS}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{12pt}
-\begin{resitemize}
-\item Programming Languages: Java, SQL, Python, C, C\#
-\item Software: Eclipse, MySQLWorkbench, Visual Studio, Unity, Jupyter Notebook, Excel
-\item Languages: Chinese(Native), English(Fluent), Korean(Basic)
-\end{resitemize}
 \vspace{8pt}
 
 \end{document}
+
+%Technical Skills Adapted Analyzed Applied Assembled Built Calculated Computed Conducted Conserved Constructed Converted Debugged Designed Determined Developed Devised Engineered Fabricated Fortified Installed Maintained Operated Overhauled Printed Programmed Rectified Reengineered Regulated Remodeled Repaired Replaced Restored Solved Specialized Standardized Studied Transmitted Upgraded Utilized
